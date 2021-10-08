@@ -1,0 +1,18 @@
+<div class="todolist">
+
+
+    <h1>TODO List</h1>
+    <p>A place to store your todos.</p>
+//add filter
+    <ol class ="thelist">
+        <li *ngFor="let todo of Todos">
+            <button *ngIf="!todo.completed" (click)="completeTodo(todo)">Complete</button>
+            <p [ngClass]="{strikethrough: todo.completed}">{{todo.task}}</p>
+            <button >X</button>
+           </li>
+
+           
+    </ol>
+
+
+</div>
